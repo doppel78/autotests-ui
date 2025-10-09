@@ -2,8 +2,8 @@ import pytest
 from playwright.sync_api import sync_playwright, expect
 
 
-@pytest.mark.registration
 @pytest.mark.regression
+@pytest.mark.registration
 def test_successful_registration():
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=False)
@@ -32,5 +32,4 @@ def test_successful_registration():
         browser = playwright.chromium.launch()
         context = browser.new_context(storage_state='browser-state.json')
         page = context.new_page()
-
         page.goto('https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/dashboard')
