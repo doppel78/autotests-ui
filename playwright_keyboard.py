@@ -11,3 +11,4 @@ with sync_playwright() as playwright:
 
     for char in 'user@gmail.com':
         page.keyboard.type(char, delay=300)
+
